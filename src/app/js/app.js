@@ -4,18 +4,55 @@ $(document).ready(function ($) {
 
  /*Главная страница*/
 
-    //формирую меню
+    /*Отображение медиа-меню при клике*/
 
-    $('.header__menu-item').each(function () {
-        let str = $(this).find('p').text();
-        let arr = str.split('');
-        let that = this;
+    $('.icon-media-menu').on('click',function () {
+        if($(this).hasClass('icon-media-menu_active')){
+            $('section, footer').show();
+            $('.header__wrapper-logo-menu').hide();
+            $(this).removeClass('icon-media-menu_active');
 
-        arr.forEach(function(item, i, arr) {
-            $(that).find("p").append('<span>'+item+'</span>')
-        });
+        }
+        else {
+            $(this).addClass('icon-media-menu_active');
+            $('section, footer').hide();
+            $('.header__wrapper-logo-menu').show();
+        }
+
+
+
 
     });
+
+
+    //формирую меню
+
+    if ($(window).width()>=830){
+        $('.header__menu-item').each(function () {
+            let str = $(this).find('p').text();
+            let arr = str.split('');
+            let that = this;
+
+            arr.forEach(function(item, i, arr) {
+                $(that).find("p").append('<span>'+item+'</span>')
+            });
+
+        });
+
+    }
+
+    // $('.header__menu-item').each(function () {
+    //     let str = $(this).find('p').text();
+    //     let arr = str.split('');
+    //     let that = this;
+    //
+    //     arr.forEach(function(item, i, arr) {
+    //         $(that).find("p").append('<span>'+item+'</span>')
+    //     });
+    //
+    // });
+
+
 
     /*Страница модели*/
 

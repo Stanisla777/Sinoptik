@@ -191,6 +191,12 @@ img {
 }
 .header__menu-item p b {
   display: none;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 4px;
 }
 .header__social-networks {
   padding-top: 6px;
@@ -1052,6 +1058,7 @@ ul#model-slider {
   position: absolute;
   width: 100%;
   display: none;
+  z-index: 10;
 }
 .wrapper-select__option li {
   display: flex;
@@ -1067,9 +1074,6 @@ ul#model-slider {
 }
 .wrapper-busket-buyer input {
   width: 100%;
-}
-.wrapper-busket-buyer__item > div {
-  margin-bottom: 23px;
 }
 .wrapper-busket-buyer__item > input {
   padding-left: 10px;
@@ -1212,4 +1216,41 @@ ul#model-slider {
   display: block;
   margin: 31px auto;
   width: 140px;
+}
+.icon-media-menu {
+  display: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/menu_button.png");
+}
+.media-social-network {
+  display: none;
+}
+.wrapper-buyer {
+  display: flex;
+}
+.wrapper-buyer__search {
+  width: 74.7%;
+  margin-right: 20px;
+}
+.wrapper-buyer__search .row-3-col-mar-10 {
+  margin-bottom: 3px;
+}
+.wrapper-buyer__comment {
+  width: calc(100% - 74.7% - 20px);
+}
+/*Доработка слайдера*/
+.owl-carousel-models .model-slider-item {
+  -webkit-transition: top 1s ease-out 1s;
+  -moz-transition: top 1s ease-out 1s;
+  -o-transition: top 1s ease-out 1s;
+  transition: top 1s ease-out 1s;
+  display: none;
+}
+.owl-carousel-models .model-slider-item.active-item {
+  display: block;
 }
